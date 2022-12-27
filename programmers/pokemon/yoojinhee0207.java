@@ -1,13 +1,13 @@
-import java.util.HashMap;
+import java.util.HashSet;
 class Solution {
     public int solution(int[] nums) {
-        HashMap<Integer,Integer> map = new HashMap<>();
+        HashSet<Integer> set = new HashSet<>();
 		
 		for(int i=0,length =nums.length; i<length; i++) {
-			map.put(nums[i], nums[i]);
+			set.add(nums[i]);
 		}
 		
-		int answer = map.size()<nums.length/2 ? map.size() : nums.length/2;
+		int answer = set.size()<nums.length/2 ? set.size() : nums.length/2;
         
         return answer;
     }
